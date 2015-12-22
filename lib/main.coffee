@@ -26,14 +26,14 @@ module.exports =
 
   activate: (state) ->
     # Handle settings changes
-    atom.config.onDidChange 'one-light-ui.fontSize', ->
-      setFontSize(atom.config.get('one-light-ui.fontSize'))
-    atom.config.onDidChange 'one-light-ui.layoutMode', ->
-      setLayoutMode(atom.config.get('one-light-ui.layoutMode'))
+    atom.config.onDidChange 'solarized-one-light-ui.fontSize', ->
+      setFontSize(atom.config.get('solarized-one-light-ui.fontSize'))
+    atom.config.onDidChange 'solarized-one-light-ui.layoutMode', ->
+      setLayoutMode(atom.config.get('solarized-one-light-ui.layoutMode'))
 
     # Initialize
-    setFontSize(atom.config.get('one-light-ui.fontSize'))
-    setLayoutMode(atom.config.get('one-light-ui.layoutMode'))
+    setFontSize(atom.config.get('solarized-one-light-ui.fontSize'))
+    setLayoutMode(atom.config.get('solarized-one-light-ui.layoutMode'))
 
   deactivate: ->
     unsetFontSize()
@@ -53,7 +53,7 @@ unsetFontSize = ->
 
 # Layout Mode -----------------------
 setLayoutMode = (layoutMode) ->
-  root.setAttribute('theme-one-light-ui-layoutmode', layoutMode.toLowerCase())
+  root.setAttribute('theme-solarized-one-light-ui-layoutmode', layoutMode.toLowerCase())
 
 unsetLayoutMode = ->
-  root.removeAttribute('theme-one-light-ui-layoutmode')
+  root.removeAttribute('theme-solarized-one-light-ui-layoutmode')

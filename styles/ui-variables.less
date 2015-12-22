@@ -1,14 +1,31 @@
 
-// ONE light UI variables
+// Solarized ONE light UI variables
 // ----------------------------------------------
 
+// Solarized reference colors ---
+@base03:    #002b36;
+@base02:    #073642;
+@base01:    #586e75;
+@base00:    #657b83;
+@base0:     #839496;
+@base1:     #93a1a1;
+@base2:     #eee8d5;
+@base3:     #fdf6e3;
+@yellow:    #b58900;
+@orange:    #cb4b16;
+@red:       #dc322f;
+@magenta:   #d33682;
+@violet:    #6c71c4;
+@blue:      #268bd2;
+@cyan:      #2aa198;
+@green:     #859900;
+
 @import "syntax-variables";
-.ui-syntax-color() { @syntax-background-color: hsl(220,1%,98%); } .ui-syntax-color(); // fallback color
-@ui-syntax-color: @syntax-background-color;
+@ui-syntax-color: @base2;
 
 // Color guards -----------------
 @ui-s-h: hue(@ui-syntax-color);
-.ui-hue() when (@ui-s-h = 0) { @ui-hue: 220; } // Use blue hue when no saturation
+.ui-hue() when (@ui-s-h = 0) { @ui-hue: 43; } // Use sand hue when no saturation
 .ui-hue() when (@ui-s-h > 0) { @ui-hue: @ui-s-h; }
 .ui-hue();
 
@@ -35,6 +52,11 @@
 @text-color-highlight:  darken(@text-color, 10%);
 @text-color-selected:   darken(@text-color-highlight, 10%);
 
+@text-color-info:    @blue;
+@text-color-success: @green;
+@text-color-warning: @orange;
+@text-color-error:   @red;
+
 @text-color-info:    hsl(208, 100%, 54%);
 @text-color-success: hsl(132,  60%, 44%);
 @text-color-warning: hsl( 37,  90%, 44%);
@@ -42,10 +64,10 @@
 
 
 // Background -----------------
-@background-color-info:    hsl(208, 100%, 56%);
-@background-color-success: hsl(132,  48%, 48%);
-@background-color-warning: hsl( 40,  60%, 52%);
-@background-color-error:   hsl(  0,  60%, 56%);
+@background-color-info:    lighten(@text-color-info, 4%);
+@background-color-success: lighten(@text-color-success, 4%);
+@background-color-warning: lighten(@text-color-warning, 4%);
+@background-color-error:   lighten(@text-color-error, 4%);
 
 @background-color-highlight: hsla(@ui-hue, @ui-saturation, 50%,.08);
 @background-color-selected:  hsla(@ui-hue, @ui-saturation, 50%,.16);
@@ -91,11 +113,11 @@
 @tree-view-background-color:       @level-3-color;
 @tree-view-border-color:           @base-border-color;
 
-@ui-site-color-1: hsl(208, 100%, 56%); // blue
-@ui-site-color-2: hsl(132,  48%, 48%); // green
-@ui-site-color-3: hsl( 40,  60%, 52%); // orange
-@ui-site-color-4: #D831B0;             // pink
-@ui-site-color-5: #EBDD5B;             // yellow
+@ui-site-color-1: @blue;
+@ui-site-color-2: @green;
+@ui-site-color-3: @orange;
+@ui-site-color-4: @magenta;
+@ui-site-color-5: @yellow;
 
 
 // Sizes -----------------
@@ -123,7 +145,7 @@
 // These variables are only used in this theme
 // ----------------------------------------------
 
-@ui-theme-name: one-light-ui;
+@ui-theme-name: solarized-one-light-ui;
 
 // Text (Custom) -----------------
 @text-color-faded: fade(@text-color, 30%);
@@ -165,7 +187,7 @@
 @progress-background-color:         @base-accent-color;
 
 @scrollbar-color:                   darken(@level-3-color, 14%);
-@scrollbar-background-color:        @level-3-color; // replaced `transparent` with a solid color to test https://github.com/atom/one-light-ui/issues/4
+@scrollbar-background-color:        @level-3-color; // replaced `transparent` with a solid color to test https://github.com/senki/solarized-one-light-ui/issues/4
 @scrollbar-color-editor:            contrast(@ui-syntax-color, darken(@ui-syntax-color, 14%), lighten(@ui-syntax-color, 9%) );
 @scrollbar-background-color-editor: @ui-syntax-color;
 
