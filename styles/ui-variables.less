@@ -47,16 +47,15 @@
 
 
 // Text -----------------
-@text-color:            @ui-fg;
-@text-color-subtle:     lighten(@text-color, 32%);
-@text-color-highlight:  darken(@text-color, 10%);
-@text-color-selected:   darken(@text-color-highlight, 10%);
+@text-color:            @base01;
+@text-color-subtle:     @base1;
+@text-color-highlight:  @base02;
+@text-color-selected:   @base03;
 
 @text-color-info:    @blue;
 @text-color-success: @green;
 @text-color-warning: @orange;
 @text-color-error:   @red;
-
 
 
 // Background -----------------
@@ -146,11 +145,11 @@
 // Text (Custom) -----------------
 @text-color-faded: fade(@text-color, 30%);
 
-@text-color-added:    @text-color-success;  // green
+@text-color-added:    @green;  // green
 @text-color-ignored:  @text-color-subtle;   // faded
-@text-color-modified: @text-color-warning;  // orange
-@text-color-removed:  @text-color-error;    // red
-@text-color-renamed:  @text-color-info;     // blue
+@text-color-modified: @yellow;  // orange
+@text-color-removed:  @red;    // red
+@text-color-renamed:  @blue;     // blue
 
 
 // Background (Custom) -----------------
