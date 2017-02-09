@@ -1,44 +1,20 @@
-
-# Theme settings
-# -----------------------
-
 root = document.documentElement
 
 module.exports =
-  config:
-    fontSize:
-      title: 'Font Size'
-      description: 'Change the UI font size. Needs to be between 8 and 20.'
-      type: ['integer', 'string']
-      minimum: 8
-      maximum: 20
-      default: 'Auto'
-    layoutMode:
-      title: 'Layout Mode'
-      description: 'In Auto mode, the UI will automatically adapt based on the window size.'
-      type: 'string'
-      default: 'Auto'
-      enum: [
-        'Compact'
-        'Auto'
-        'Spacious'
-      ]
-
   activate: (state) ->
-    # Handle settings changes
-    atom.config.onDidChange 'solarized-one-light-ui.fontSize', ->
-      setFontSize(atom.config.get('solarized-one-light-ui.fontSize'))
-    atom.config.onDidChange 'solarized-one-light-ui.layoutMode', ->
-      setLayoutMode(atom.config.get('solarized-one-light-ui.layoutMode'))
+    atom.config.observe 'solarized-one-light-ui.fontSize', (value) ->
+      setFontSize(value)
 
-    # Initialize
-    setFontSize(atom.config.get('solarized-one-light-ui.fontSize'))
-    setLayoutMode(atom.config.get('solarized-one-light-ui.layoutMode'))
+    atom.config.observe 'solarized-one-light-ui.layoutMode', (value) ->
+      setLayoutMode(value)
+
+    atom.config.observe 'solarized-one-light-ui.tabSizing', (value) ->
+      setTabSizing(value)
 
   deactivate: ->
     unsetFontSize()
     unsetLayoutMode()
-
+    unsetTabSizing()
 
 # Font Size -----------------------
 setFontSize = (currentFontSize) ->
@@ -50,10 +26,16 @@ setFontSize = (currentFontSize) ->
 unsetFontSize = ->
   root.style.fontSize = ''
 
-
 # Layout Mode -----------------------
 setLayoutMode = (layoutMode) ->
   root.setAttribute('theme-solarized-one-light-ui-layoutmode', layoutMode.toLowerCase())
 
 unsetLayoutMode = ->
   root.removeAttribute('theme-solarized-one-light-ui-layoutmode')
+
+# Tab Sizing -----------------------
+setTabSizing = (tabSizing) ->
+  root.setAttribute('theme-solarized-one-light-ui-tabsizing', tabSizing.toLowerCase())
+
+unsetTabSizing = ->
+  root.removeAttribute('theme-solarized-one-light-ui-tabsizing')

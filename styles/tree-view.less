@@ -18,11 +18,11 @@
   }
 
   .selected:before {
-    background: @background-color-highlight;
+    background: @tree-view-background-selected-color;
   }
 }
 
-.theme-one-dark-ui .tree-view .project-root.project-root::before {
+.theme-solarized-one-light-ui .tree-view .project-root.project-root::before {
   border-top: 1px solid transparent;
   background-clip: padding-box;
 }
@@ -70,7 +70,7 @@
   margin-left: -@component-icon-padding;
   height: @ui-tab-height;
   width: 2px;
-  background: @base-accent-color;
+  background: @accent-color;
   opacity: 0;
   transition: opacity .16s;
 }

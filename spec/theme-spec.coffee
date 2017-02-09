@@ -1,4 +1,4 @@
-describe "Solarized Light UI theme", ->
+describe "Solarized One Light UI theme", ->
   beforeEach ->
     waitsForPromise ->
       atom.packages.activatePackage('solarized-one-light-ui')
@@ -17,3 +17,9 @@ describe "Solarized Light UI theme", ->
 
     atom.config.set('solarized-one-light-ui.layoutMode', 'Spacious')
     expect(document.documentElement.getAttribute('theme-solarized-one-light-ui-layoutmode')).toBe 'spacious'
+
+  it "allows the tab sizing to be set via config", ->
+    expect(document.documentElement.getAttribute('theme-solarized-one-light-ui-tabsizing')).toBe 'auto'
+
+    atom.config.set('one-light-ui.tabSizing', 'Minimum')
+    expect(document.documentElement.getAttribute('theme-solarized-one-light-ui-tabsizing')).toBe 'minimum'
