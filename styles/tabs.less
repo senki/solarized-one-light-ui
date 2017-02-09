@@ -174,9 +174,11 @@
   // Modified ----------------------
   .tab.modified {
     &:hover .close-icon {
-      color: @accent-color;
+      color: @red;
       &:hover {
-        color: @accent-bg-text-color;
+        color: @accent-text-color;
+        background-color: @red;
+
       }
     }
     &:not(:hover) .close-icon {
@@ -185,7 +187,7 @@
       width: 1.5em;
       height: 1.5em;
       line-height: 1.5;
-      color: @accent-color;
+      color: @red;
       border: none;
       transform: scale(1);
       &::before {
