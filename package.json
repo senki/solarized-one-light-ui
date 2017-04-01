@@ -1,15 +1,15 @@
 {
   "name": "solarized-one-light-ui",
   "theme": "ui",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "description": "Solarized One light UI theme for Atom",
   "keywords": [
     "light",
     "solarized",
     "ui"
   ],
-  "repository": "https://github.com/senki/solarized-one-light-ui.git",
   "license": "MIT",
+  "repository": "https://github.com/senki/solarized-one-light-ui.git",
   "main": "lib/main",
   "engines": {
     "atom": ">0.40.0"
