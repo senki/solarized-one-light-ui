@@ -1,4 +1,4 @@
-describe "Solarized One Light UI theme", ->
+describe "Solarized One Light UI Theme", ->
   beforeEach ->
     waitsForPromise ->
       atom.packages.activatePackage('solarized-one-light-ui')
@@ -12,14 +12,14 @@ describe "Solarized One Light UI theme", ->
     atom.config.set('solarized-one-light-ui.fontSize', 'Auto')
     expect(document.documentElement.style.fontSize).toBe ''
 
-  it "allows the layout mode to be set via config", ->
-    expect(document.documentElement.getAttribute('theme-solarized-one-light-ui-layoutmode')).toBe 'auto'
-
-    atom.config.set('solarized-one-light-ui.layoutMode', 'Spacious')
-    expect(document.documentElement.getAttribute('theme-solarized-one-light-ui-layoutmode')).toBe 'spacious'
+  it "allows the tab sizing to be set via config", ->
+    atom.config.set('solarized-one-light-ui.tabSizing', 'Maximum')
+    expect(document.documentElement.getAttribute('theme-solarized-one-light-ui-tabsizing')).toBe 'maximum'
 
   it "allows the tab sizing to be set via config", ->
-    expect(document.documentElement.getAttribute('theme-solarized-one-light-ui-tabsizing')).toBe 'auto'
-
     atom.config.set('solarized-one-light-ui.tabSizing', 'Minimum')
     expect(document.documentElement.getAttribute('theme-solarized-one-light-ui-tabsizing')).toBe 'minimum'
+
+  it "allows the dock toggle buttons to be hidden via config", ->
+    atom.config.set('solarized-one-light-ui.hideDockButtons', true)
+    expect(document.documentElement.getAttribute('theme-solarized-one-light-ui-dock-buttons')).toBe 'hidden'
