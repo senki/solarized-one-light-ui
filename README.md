@@ -4,7 +4,7 @@ Fork of the original One Light UI Theme to make a perfect companion of the [Sola
 
 The One Light UI generates a pale teal background color when used with Solarized Dark Syntax Theme. That unavailable in solarized colorspace, and I think it is not so pretty. :)
 
-![Main](https://cloud.githubusercontent.com/assets/459353/22772138/ea582568-eed5-11e6-99f5-5f3c4376e401.png)
+![solarized-one-light-ui v1 10 8](https://user-images.githubusercontent.com/459353/31153703-37a05ce6-a8d5-11e7-823a-4e9c8be6d984.png)
 
 ### Install
 
