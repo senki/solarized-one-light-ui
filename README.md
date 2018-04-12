@@ -15,7 +15,7 @@ $ apm install solarized-one-light-ui
 
 ### Settings
 
-![Theme Setup](https://cloud.githubusercontent.com/assets/459353/26137066/4fa063be-3af2-11e7-9b1e-6eeb65831a79.png)
+![Theme Setup](https://user-images.githubusercontent.com/459353/38657244-c244dcd4-3e51-11e8-92f7-79f7e336cfd4.png)
 
 In the theme settings you can change the __Font Size__ to scale the whole UI up or down.
 
@@ -25,9 +25,16 @@ Switch between 3 __Tab Sizing__ mode:
 2. `Maximum` - In Maximum mode the tabs will expand to take up the full width.
 3. `Minimum` - In Minimum mode the tabs will only take as little space as needed and also show longer file names.
 
-Also you can __Hide dock toggle buttons__.
+Choose where __Tab Close Button__ shown:
+
+1. `Right` (default)
+2. `Left`
+
+You can __Hide dock toggle buttons__.
 
 > Note: When hiding the toggle buttons, opening a dock needs to be done by using the keyboard or other alternatives.
+
+Also you can __Make tree-view project headers sticky__.
 
 ### Customize
 
