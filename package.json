@@ -1,7 +1,7 @@
 {
   "name": "solarized-one-light-ui",
   "theme": "ui",
-  "version": "1.12.0",
+  "version": "1.12.3",
   "description": "Solarized One light UI Theme for Atom. A perfect companion for the Solarized Dark Syntax Theme.",
   "keywords": [
     "light",
@@ -71,7 +71,7 @@
     "stickyHeaders": {
       "title": "Make tree-view project headers sticky",
       "type": "boolean",
-      "default": "true",
+      "default": "false",
       "order": 5
     }
   }
